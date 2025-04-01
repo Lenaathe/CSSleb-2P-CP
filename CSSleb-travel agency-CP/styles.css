@@ -1,0 +1,338 @@
+
+/* ------------------------------------------- Général---------------------------------------- */
+
+body {
+    font-family: 'Arial', sans-serif; /* Définit la police */
+    background-color: #d9d7cf!important; /* Couleur de fond forcée */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les paddings */
+    padding-top: 70px; /* Évite que la navbar fixe cache le contenu */
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+/*  Définition des couleurs principales utilisées dans le design */
+
+:root {
+    --vert-sauge: #7B8A7E;
+    --vert-olive: #8B8E7E;
+    --vert-claire :#dcded5;           
+    --beige-sable: #B8A58E;
+    --beige-clair: #C6B6A6;
+    --brun-cafe: #6B4F3F;
+    --creme-vanille: #E8E2DF;
+    --vert :#55574b;
+    --cafe:#594438;
+}
+
+/*------------------------------------------------- Navbar ------------------------------------*/
+
+.navbar {
+    background: var(--vert) !important; /* Applique la couleur principale */
+    padding: 10px 0; /* Ajoute un espace en haut et en bas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour effet de profondeur */
+}
+
+.navbar-brand {
+    font-size: 1.8rem; /* Augmente la taille du texte du logo */
+    font-weight: bold; /* Rend le texte plus visible */
+    color: var(--creme-vanille) !important; /* Couleur du texte contrastée */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Ajuste la taille des liens */
+    margin-right: 15px; /* Ajoute un espace entre les liens */
+    color: var(--creme-vanille) !important; /* Harmonisation avec le thème */
+    transition: color 0.3s ease-in-out; /* Effet fluide lors du survol */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--cafe) !important; /* Changement de couleur au survol */
+}
+
+
+/* -------------------------------------------- Section Héro---------------------------------------- */
+.hero {
+    position: relative; /* Définit la position de la section pour que les éléments enfants absolus soient positionnés par rapport à elle */
+    width: 100%; /* Occupe toute la largeur */
+    height: 100vh; /* Prend toute la hauteur de l’écran */
+    display: flex; /* Utilise Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte */
+    padding: 0 20px; /* Ajoute un petit espace sur les côtés */
+    overflow: hidden; /* Empêche le débordement des éléments */
+    margin-top: 0; /* Supprime l’espace au-dessus */
+    margin-top: -70px; /* Déplace la section vers le haut pour compenser la hauteur de la navbar */
+}
+
+.hero-img {
+    position: absolute; /* Place l’image en arrière-plan de la section */
+    top: 0;
+    left: 0;
+    width: 100%; /* L’image couvre toute la largeur */
+    height: 100%; /* L’image couvre toute la hauteur */
+    object-fit: cover; /* Ajuste l’image pour qu’elle couvre toute la zone sans être déformée */
+    z-index: -1; /* Place l’image derrière le contenu */
+    filter: brightness(50%); /* Assombrit l’image pour améliorer la lisibilité du texte */
+}
+
+.hero-content {
+    position: relative; /* S’assure que le contenu reste au-dessus de l’image */
+    z-index: 1; /* Place le contenu au-dessus de l’image */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Définit la taille du titre */
+    font-weight: bold; /* Rend le texte en gras */
+    margin-bottom: 10px; /* Ajoute un espace sous le titre */
+    color: var(--creme-vanille); /* Applique la couleur définie dans :root */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Définit la taille du texte */
+    margin-bottom: 20px; /* Ajoute un espace sous le paragraphe */
+    color: var(--beige-clair); /* Applique une couleur plus douce */
+}
+
+.btn-hero {
+    display: inline-block; /* Permet de garder la taille du bouton ajustée au texte */
+    background: #483a32; /* Définit la couleur de fond */
+    color: var(--creme-vanille); /* Définit la couleur du texte */
+    padding: 10px 20px; /* Ajoute un espace interne */
+    font-size: 1.2rem; /* Définit la taille du texte */
+    font-weight: bold; /* Rend le texte en gras */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 5px; /* Arrondit légèrement les bords */
+    transition: background 0.3s ease-in-out; /* Ajoute une animation pour un effet fluide au survol */
+}
+
+.btn-hero:hover {
+    background: var(--vert-olive); /* Change la couleur de fond au survol */
+}
+/* -------------------------------------------- Section Destinations----------------------------------- */
+
+.destinations {  
+    background: linear-gradient(to bottom, #f5f3ee, #b0aca0 ); /* Dégradé de haut en bas, du beige clair au gris taupe */
+    padding: 70px 0; /* Espace autour du contenu */
+    text-align: center; /* Centre le texte dans la section */
+}
+
+.destinations h2 {
+    font-size: 2.5rem; /* Taille du titre principal */
+    font-weight: bold; /* Texte en gras */
+    color: var(--cafe); /* Couleur définie dans les variables CSS */
+    margin-bottom: 40px; /* Espace sous le titre */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Police générique */
+}
+
+.destinations h3 {
+    color: #373530; /* Couleur du texte */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Police générique */
+}
+
+/* Conteneur principal des cartes */
+.destinations .container {
+    width: 100%; /* Utilise toute la largeur disponible */
+    margin: auto; /* Centre le conteneur */
+}
+
+/* Alignement des cartes en ligne */
+.row {
+    display: flex; /* Active le mode flexbox pour aligner les éléments horizontalement */
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Espacement entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur petits écrans */
+}
+
+/* Style des colonnes contenant les cartes */
+.col {
+    flex: 1; /* Permet l'ajustement automatique de la largeur */
+    min-width: 280px; /* Taille minimale des colonnes */
+    max-width: 30%; /* Taille maximale pour éviter qu'elles deviennent trop larges */
+}
+
+/* Style des cartes */
+.card {
+    background: var(--beige-sable); /* Couleur de fond de la carte */
+    width: 360px; /* Largeur fixe pour uniformiser les cartes */
+    border: none; /* Supprime la bordure */
+    border-radius: 12px; /* Coins arrondis */
+    overflow: hidden; /* Empêche l'image de dépasser les bords arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide au survol */
+    display: flex; /* Utilise flexbox pour aligner le contenu */
+    flex-direction: column; /* Organise les éléments verticalement */
+}
+
+/* Effet de survol */
+.card:hover {
+    transform: scale(1.05); /* Légère augmentation de taille */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre pour effet de profondeur */
+}
+
+/* Image des cartes */
+.card img {
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    height: 220px; /* Hauteur fixe */
+    object-fit: cover; /* Ajuste l’image sans la déformer */
+}
+
+/* Contenu du corps de la carte */
+.card-body {
+    flex-grow: 1; /* Étend le contenu pour que toutes les cartes aient la même hauteur */
+    display: flex; /* Utilise flexbox */
+    flex-direction: column; /* Organise les éléments verticalement */
+    justify-content: flex-start; /* Aligne le texte en haut */
+}
+
+/* Titre de la carte */
+.card-title {
+    font-size: 1.6rem; /* Taille du titre */
+    font-weight: bold; /* Texte en gras */
+    color: var(--brun-cafe); /* Couleur personnalisée */
+}
+
+/* Texte de la carte */
+.card-text {
+    font-size: 1rem; /* Taille du texte */
+    color: var(--brun-cafe); /* Couleur du texte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police */
+}
+
+#circuits-wrapper {
+    background: linear-gradient(to bottom, #b0aca0, #d9d7cf ); /* Dégradé du gris taupe au beige clair */
+    width: 100%; /* Occupe toute la largeur */
+    padding: 5px 0; /* Ajoute un léger espacement vertical */
+}
+
+#circuits-wrapper h1 {
+    position: relative; /* Permet d'ajuster la position de l'élément */
+    top: -30px; /* Remonte le titre de 30px */
+    
+    font-size: 2.5rem; /* Taille du titre principal */
+    font-weight: bold; /* Texte en gras */
+    color: #473b33; /* Brun foncé */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Police générique */
+}
+
+.accordion h2 {
+    text-align: center; /* Centre le titre de l'accordéon */
+    color: var(--creme-vanille) !important; /* Couleur personnalisée avec priorité */
+}
+
+.accordion-button {
+    font-size: 1.2rem; /* Taille du texte du bouton */
+    font-weight: 500; /* Poids du texte intermédiaire */
+    background: #4f3f36 !important; /* Fond brun foncé, avec priorité */
+    color: var(--creme-vanille) !important; /* Texte couleur crème vanille */
+    box-shadow: 0px 0px 10px var(--vert) !important; /* Ombre verte subtile autour du bouton */
+}
+
+.accordion-body {
+    font-size: 1rem; /* Taille du texte du corps */
+    background: #e6e2de !important; /* Fond beige clair avec priorité */
+}
+
+#circuits a {
+    text-shadow: 0px 0px 8px #6f4e37; /* Ajoute une ombre brun café autour du texte des liens */
+}
+/* ----------------------------------------------Formulaire de contact------------------------------ */
+#contact-wrapper {
+    background: #d9d7cf; /* Fond beige clair */
+    width: 100%; /* Occupe toute la largeur */
+    padding: 5px 0; /* Espacement en haut et en bas */
+}
+
+/* Titre */
+#contact-wrapper h2 {
+    font-size: 2.5rem; /* Taille du titre */
+    font-weight: bold; /* Texte en gras */
+    color: #52433a; /* Brun foncé */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Police */
+    position: relative; /* Permet d'ajuster la position */
+    top: -30px; /* Remonte légèrement le titre */
+}
+
+/* --------------- Formulaire -------------------- */
+form {
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: auto; /* Centre le formulaire */
+    padding: 20px; /* Espacement intérieur */
+    background: #c8c4b8; /* Fond beige-gris */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+
+/* I struggled trying to change the blue color to another one in the 'point of interest' list,
+ but I can't find how after several attempts */
+
+
+
+/* --------------- Bouton "Envoyer" -------------------- */
+form .btn {
+    width: 100%; /* Le bouton prend toute la largeur */
+    background: #4f3f36; /* Brun foncé */
+    color: var(--creme-vanille); /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    outline: none !important; /* Supprime l'effet de focus par défaut */
+    box-shadow: none !important; /* Supprime l'ombre par défaut */
+}
+
+form .btn:hover {
+    background: var(--vert-olive); /* Changement de couleur au survol */
+}
+
+form .btn:focus, 
+form .btn:active {
+    background: #4f3f36 !important; /* Rétablit la couleur après un clic */
+    box-shadow: 0 0 10px #6f4e37 !important; /* Ajoute une ombre autour du bouton */
+}
+
+/* --Suppression du bleu autour des éléments actifs et le remplacer avec un café-- */
+form input:focus, 
+form textarea:focus, 
+form select:focus, 
+form button:focus {
+    outline: none !important; /* Supprime l'effet bleu par défaut */
+    border-color: #6f4e37 !important; /* Applique un contour brun café */
+    box-shadow: 0 0 8px #6f4e37 !important; /* Ombre autour des champs actifs */
+}
+
+
+/* --------------------------------------- Footer---------------------------------------------- */
+
+footer {
+    margin-top: 60px; /* Ajoute un espace au-dessus du pied de page */
+    padding: 20px; /* Espacement intérieur */
+    background: var(--vert); /* Applique la couleur de fond définie par la variable */
+    color: var(--creme-vanille); /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    display: flex; /* Utilisation de Flexbox pour organiser les éléments */
+    flex-direction: column; /* Dispose les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Ajoute un espacement entre les éléments */
+}
+
+/* Icônes sociales */
+.social-icons {
+    display: flex; /* Utilisation de Flexbox pour aligner les icônes */
+    justify-content: center; /* Centre les icônes horizontalement */
+    gap: 30px; /* Ajoute un espacement entre les icônes */
+}
+
+.social-icons a {
+    font-size: 1.5rem; /* Définit la taille des icônes */
+    color: var(--creme-vanille); /* Couleur des icônes */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation fluide au survol */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Agrandit légèrement l'icône au survol */
+    color: var(--beige-sable); /* Change la couleur de l'icône au survol */
+}
+
+/* Copyright */
+footer p {
+    font-size: 1rem; /* Définit la taille du texte */
+    margin-top: 10px; /* Ajoute un léger espacement au-dessus du texte */
+}

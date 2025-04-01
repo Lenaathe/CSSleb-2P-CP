@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signature Escapes</title>
+    <link rel="stylesheet" href="styles.css">
+
+   <!-- Intégration de Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Intégration des icônes FontAwesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<!------------------------------------------ Barre de navigation ----------------------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#"  style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Signature Escapes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destination">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#circuits-wrapper">Circuits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-wrapper">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+<!----------------------------------------- Section Héro ------------------------------------------------->
+
+    <header id="hero" class="hero">
+        <img src="../CSSleb-travel agency-CP/images/hero.jpg" alt="Paysage magnifique" class="hero-img">
+        <div class="hero-content">
+            <h1>Explorez le Monde avec Signature Escapes</h1>
+            <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Découvrez des destinations inoubliables et vivez des aventures uniques.</p>
+            <a href="#contact-wrapper" class="btn-hero">Réservez Maintenant</a>
+        </div>
+    </header>
+
+<!-------------------------------------------- Section Destinations ----------------------------------------->
+   
+<section class="destinations"  id="destination">
+        <div class="container">
+            <h2>Nos Destinations </h2>
+            <div class="row">
+
+                <!-- Carte pour la destination Suisse -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../CSSleb-travel agency-CP/images/Destination1.jpg" alt="Suisse">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">Suisse</h3>
+                            <p class="card-text">Une Destination Incontournable
+                                Entre montagnes majestueuses, lacs cristallins et villes élégantes, la Suisse offre un cadre idyllique pour les voyageurs. Que ce soit pour explorer Genève, skier à Zermatt ou savourer son célèbre chocolat, chaque région promet une expérience unique. Avec son réseau de transport exceptionnel et ses paysages à couper le souffle, la Suisse est la destination parfaite pour un séjour alliant nature, culture et raffinement.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Carte pour la destination  Maldives -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../CSSleb-travel agency-CP/images/Destination2.jpg" alt="Maldives">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"> Maldives</h3>
+                            <p class="card-text">Situées au cœur de l'océan Indien, les Maldives forment un archipel d'îles paradisiaques réputé pour ses eaux cristallines, ses plages de sable blanc et sa riche biodiversité marine. Destination idéale pour la plongée, le snorkeling et diverses activités nautiques, elles offrent également des hébergements d’exception, notamment des villas sur pilotis avec vue panoramique sur l’océan. La culture locale, influencée par plusieurs civilisations, se découvre à travers sa gastronomie, son artisanat et ses traditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte pour la destination Philippines -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../CSSleb-travel agency-CP/images/Destination3.jpg" alt="Philippines">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title">Philippines </h3>
+                            <p class="card-text"> Un Paradis Tropical à Découvrir
+                                Avec ses plages de sable blanc, ses eaux turquoise et ses paysages spectaculaires, les Philippines sont une destination de rêve pour les amoureux de nature et d’aventure. Composé de plus de 7 000 îles, cet archipel offre des sites emblématiques comme Palawan, Boracay et les rizières en terrasses de Banaue. Entre plongée sous-marine, randonnées et découvertes culturelles, chaque voyage aux Philippines promet une expérience inoubliable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-----------------------------------------Section Circuits avec accordéon Bootstrap ----------------------------------------------->
+  
+  <section id="circuits-wrapper" >
+   <div class="container py-5">
+    <h1 class="text-center"> Nos Circuits</h1>
+     <div class="accordion" id="voyagesAccordion">
+
+        <!-- Circuit Suisse -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#voyage1">1. Grand Tour de la Suisse </button>
+            </h2>
+            <div id="voyage1" class="accordion-collapse collapse show" data-bs-parent="#voyagesAccordion">
+                <div class="accordion-body">
+                    📍  Zurich - Berne - Montreux - Genève
+                    <br> 6 jours / 5 nuits
+                    <br>  À partir de 245 000 DA
+                    <br><b>Résumé :</b>
+                    Découvrez la Suisse à travers ses paysages alpins, ses lacs cristallins et ses villes élégantes. Ce circuit inclut une croisière sur le lac Léman, un trajet en train panoramique Glacier Express et une visite du Mont Pilate.  
+                    
+                    <ul>
+                     <li>Jour 1 : Arrivée à Zurich, découverte de la vieille ville et promenade le long de la Bahnhofstrasse.</li>
+                     <li>Jour 2 : Départ pour Berne, visite du centre historique (UNESCO) et des jardins des ours. </li>
+                     <li>Jour 3 : Route vers Montreux, croisière sur le lac Léman et visite du château de Chillon.</li>
+                     <li>Jour 5 : Visite de Genève : Jet d'Eau, ONU, horloge fleurie et quartier international. </li>
+                     <li>Jour 6 : Temps libre à Genève et départ.</li>
+                     
+                    </ul>
+                    <a href="#contact-wrapper" style="color: #737960;">🔗 Voir les détails et réserver maintenant</a></div>
+                 
+            </div>
+        </div>
+       <!-- Circuit Islande -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#voyage2">2. Évasion aux Maldives : Entre Lagons Turquoises et Plages de Rêve </button>
+            </h2>
+            <div id="voyage2" class="accordion-collapse collapse" data-bs-parent="#voyagesAccordion">
+                <div class="accordion-body">
+                    📍 Malé - Atoll de Baa - Atoll de South Ari - Malé
+                    <br>  7 jours / 6 nuits
+                    <br> À partir de 310 000 DA
+
+                    <br><b> Résumé :</b>
+                    Explorez les Maldives, un véritable paradis tropical entre lagons turquoise, plages de sable blanc et récifs coralliens spectaculaires. Ce circuit inclut des expériences inoubliables comme une croisière au coucher du soleil, du snorkeling avec les raies manta et une excursion sur une île locale.
+                   
+                    <ul>
+                      <li>Jour 1 : Arrivée à Malé - Accueil à l'aéroport, transfert en hydravion ou en bateau rapide vers une île-hôtel. Installation et détente sur la plage.</li>
+                      <li>Jour 2 : Exploration marine - Snorkeling ou plongée pour découvrir les récifs coralliens et la faune sous-marine (raies manta, requins-baleines). </li>
+                      <li>Jour 3 : Excursion sur une île locale - Visite d'une île habitée pour découvrir la culture maldivienne et ses traditions.</li>
+                      <li> Jour 4 : Détente et bien-être - Journée libre pour profiter du spa, du farniente sur la plage ou d'activités nautiques (kayak, paddle, jet-ski).</li>
+                       <li>Jour 5 : Coucher de soleil en dhoni - Balade romantique en bateau traditionnel maldivien pour admirer le coucher de soleil.</li>  
+                       <li>Jour 6 : Journée Robinson Crusoé - Excursion sur un banc de sable isolé avec pique-nique en pleine nature.</li> 
+                       <li>Jour 7 : Départ - Retour à Malé et vol retour avec des souvenirs inoubliables.</li>                 
+                    </ul>
+                     <a href="#contact-wrapper"style="color: #737960;">🔗 Voir les détails et réserver maintenant</a></div>
+            </div>
+        </div>  
+
+         <!-- Circuit Philippines -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#voyage3">3. Paradis des Philippines : Îles et Plages de Rêve </button>
+            </h2>
+            <div id="voyage3" class="accordion-collapse collapse" data-bs-parent="#voyagesAccordion">
+                <div class="accordion-body">
+               <p> 📍 Manille - Palawan - El Nido - Cebu
+                <br>  8 jours / 7 nuits
+                <br> À partir de 255 000 DA
+                <br> <b>Résumé :</b>
+                Évadez-vous aux Philippines avec ce circuit mêlant plages paradisiaques, lagons cachés et nature préservée. Au programme : exploration des lagons d'El Nido, plongée dans les eaux cristallines de Cebu et découverte de la culture locale.
+                
+                <ul>
+                 <li> Jour 1 : Arrivée à Manille, découverte de la vieille ville et du quartier Intramuros.</li> 
+                 <li> Jour 2 : Route vers Banaue, arrêt à plusieurs points panoramiques.</li> 
+                 <li>Jour 3 : Exploration des rizières en terrasses de Banaue et rencontre avec la communauté Ifugao.</li> 
+                 <li> Jour 4 : Départ pour Sagada, visite des cercueils suspendus et des grottes de Sumaguing.</li>
+                 <li>Jour 5 : Route vers Baguio, découverte du parc Burnham et du marché de la ville.</li> 
+                 <li>Jour 6 : Excursion dans la région montagneuse de La Trinidad et visite d'une ferme de fraises.</li> 
+                 <li> Jour 7 : Retour à Manille, temps libre pour le shopping.</li> 
+                 <li>Jour 8 : Départ pour l'aéroport.</li> 
+                </ul>
+                  <a href="#contact-wrapper" style="color: #737960;">🔗 Voir les détails et réserver maintenant</a> </p></div>
+            </div>
+        </div>
+
+
+     </div>
+    </div>
+</section>
+
+<!---------------------------------------------- Formulaire de Contact ----------------------------------------------------------------->
+   
+   <section id="contact-wrapper">
+        <div class="container py-5">
+         <h2 class="text-center">Contactez-nous</h2>
+         <form>
+
+             <!-- Champ pour le nom -->
+            <div class="mb-3">
+                <label class="form-label">Nom</label>
+                <input type="text" class="form-control"><!-- Champ de saisie du nom -->
+            </div>
+
+            <!-- Champ pour l'email -->
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control"> <!-- Champ de saisie de l'email -->
+            </div>
+
+             <!-- Sélection de la destination -->
+            <div class="mb-3">
+                <label class="form-label">Destination d'intérêt</label>
+                <select class="form-select"> <!-- Liste déroulante des destinations -->
+                    <option>Suisse</option>
+                    <option>Islande</option>
+                    <option>Philippines</option>
+                </select>
+            </div>
+
+             <!-- Zone de texte pour le message -->
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control"></textarea> <!-- Champ de texte pour message -->
+            </div>
+
+             <!-- Bouton d'envoi du formulaire -->
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+       </div>
+    </section>
+
+<!-------------------------------------------------- Footer -------------------------------------------->
+    <footer>
+        <div class="footer-content">
+            <p>Votre prochaine aventure commence ici, Laissez-nous vous guider vers l'évasion parfaite.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <p>© 2025 Signature Escapes - Tous droits réservés</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
